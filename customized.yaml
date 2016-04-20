@@ -1,0 +1,162 @@
+sun.sun:
+  hidden: true
+# Luces
+light.sofa:
+  friendly_name: 'Luz Sofa'
+light.mueble:
+  friendly_name: 'Luz Mueble'
+light.mesitadani:
+  friendly_name: 'Mesita Dani'
+light.mesitaana:
+  friendly_name: 'Mesita Ana'
+light.lampara_del_despacho:
+  friendly_name: 'Luz Despacho'
+light.tiraled_2_0:
+  friendly_name: 'LED Comedor'
+# Scripts
+script.salirdecasa:
+  hidden: true
+script.apagaluces:
+  hidden: true
+script.timed_lamp:
+  hidden: true
+script.timer_off:
+  hidden: true
+script.buscagente:
+  hidden: true
+script.buscagentequesale:
+  hidden: true
+script.timercuarto_off:
+  hidden: true
+script.lampcuartotemporizada:
+  hidden: true
+# Media Players
+media_player.iphone:
+  hidden: true
+media_player.mini:
+  friendly_name: 'Plex'
+media_player.mini_2:
+  hidden: true
+media_player.danipad:
+  hidden: true
+# Escenas
+scene.despiertasalon:
+  friendly_name: 'Salon ON'
+scene.despiertacuarto:
+  friendly_name: 'Cuarto ON'
+scene.pinchito:
+  friendly_name: 'Pinchito'
+scene.DespiertaDespacho:
+  hidden: true
+scene.apagadespacho:
+  hidden: true
+scene.dimsalon:
+  friendly_name: 'Cine'
+#  hidden: true
+scene.pausasalon:
+  hidden: true
+scene.stopsalon:
+  hidden: true
+scene.tarde:
+  friendly_name: 'Tarde'
+#  hidden: true
+scene.noche:
+  friendly_name: 'Noche'
+#  hidden: true
+scene.salon_on:
+  hidden: true
+scene.apagar:
+  friendly_name: 'Apaga Todo'
+#  hidden: true
+scene.horadedormir:
+  hidden: true
+scene.EntradaEnCasa:
+  hidden: true
+scene.SubeLucesComedor:
+  hidden: true
+scene.BajaLucesComedor:
+  hidden: true
+scene.SubeLucesCuarto:
+  hidden: true
+scene.BajaLucesCuarto:
+  hidden: true
+# Interruptores
+switch.plex:
+  icon: 'mdi:play-circle-outline'
+switch.tv_salon:
+  icon: 'mdi:television'
+switch.radio:
+  icon: 'mdi:radio'
+input_boolean.despcuarto:
+  friendly_name: 'Despertador Cuarto'
+  icon: 'mdi:clock'
+input_boolean.luztarde:
+  friendly_name: 'Luces Tarde'
+  icon: 'mdi:clock'
+input_boolean.lucesplex:
+  friendly_name: 'Dimmer Salon'
+  icon: 'mdi:play-circle-outline'
+input_boolean.entrarsalirdecasa:
+  friendly_name: 'Entrar/Salir de casa'
+  icon: 'mdi:walk'
+input_boolean.entrarsalircuarto:
+  friendly_name: 'Luces cuarto'
+  icon: 'mdi:walk'
+input_boolean.lucesmesitacomedor:
+  friendly_name: 'Sub/Baj. Luces Mesa'
+  icon: 'mdi:lightbulb-outline'
+# Sensores MYSENSORS
+sensor.sensor_humetemp_9_0:
+  friendly_name: 'Humedad Baño'
+  icon: 'mdi:water-percent'
+sensor.sensor_humetemp_9_1:
+  friendly_name: 'Temp. Baño'
+  icon: 'mdi:temperature-celsius'
+
+sensor.sensor_puerta_2_0:
+  friendly_name: 'Puerta'
+  icon: 'mdi:glassdoor'
+
+sensor.sensebender_micro_5_1:
+  friendly_name: 'Temp. Balcon'
+  icon: 'mdi:temperature-celsius'
+sensor.sensebender_micro_5_2:
+  friendly_name: 'Hum. Balcon'
+  icon: 'mdi:water-percent'
+
+binary_sensor.micropuerta_1_3:
+  friendly_name: 'Contacto Puerta'
+  icon: 'mdi:glassdoor'
+
+
+binary_sensor.contacto_10_0:
+  friendly_name: 'Mesa Centro'
+  icon: 'mdi:format-wrap-top-bottom'
+
+binary_sensor.movyluz_3_0:
+  friendly_name: 'Movim. Comedor'
+  icon: 'mdi:walk'
+sensor.movyluz_3_1:
+  friendly_name: 'Lux Comedor'
+  icon: 'mdi:lightbulb-outline'
+
+# Sensores ZWAVE
+sensor.fibaro_system_fgms001_motion_sensor_luminance_2:
+  friendly_name: 'Lux Cuarto'
+  icon: 'mdi:lightbulb-outline'
+sensor.fibaro_system_fgms001_motion_sensor_temperature_2:
+  friendly_name: 'Temp. Cuarto'
+  icon: 'mdi:temperature-celsius'
+binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_2:
+  friendly_name: 'Movim. Cuarto'
+  icon: 'mdi:walk'
+sensor.fibaro_system_fgms001_motion_sensor_general_2:
+  hidden: true
+# Otros sensores
+sensor.harmony:
+  icon: 'mdi:television'
+sensor.mini_despacho:
+  entity_picture: /local/mini.jpg
+# Comandos
+shell_command.busca_gente:
+  hidden: true

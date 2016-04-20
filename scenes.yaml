@@ -1,0 +1,307 @@
+- name: 'Tarde'
+  entities:
+    light.sofa:
+      state: on
+      rgb_color: [254, 254, 254]
+      color_temp: 154
+      brightness: 254
+      transition: 30
+    light.mueble:
+      state: on
+      rgb_color: [254, 254, 254]
+      color_temp: 154
+      brightness: 254
+      transition: 30
+    light.tiraled_2_0:
+      state: on
+      rgb_color: [254, 254, 254]
+      brightness: 254
+    light.mesitadani:
+      state: on
+      brightness: 100
+      transition: 30
+    light.mesitaana:
+      state: on
+      brightness: 100
+      transition: 30
+
+- name: 'EntradaEnCasa'
+  entities:
+    light.sofa:
+      state: on
+      rgb_color: [254, 254, 254]
+      color_temp: 154
+      brightness: 254
+      transition: 2
+    light.mueble:
+      state: on
+      rgb_color: [254, 254, 254]
+      color_temp: 154
+      brightness: 254
+      transition: 2
+    light.tiraled_2_0:
+      state: on
+      rgb_color: [254, 254, 254]
+      brightness: 254
+      transition: 2
+    light.mesitadani:
+      state: on
+      brightness: 100
+      transition: 2
+    light.mesitaana:
+      state: on
+      brightness: 100
+      transition: 2
+
+- name: 'Salon ON'
+  entities:
+    light.sofa:
+      state: on
+      rgb_color: [254, 254, 254]
+      color_temp: 154
+      brightness: 254
+    light.mueble:
+      state: on
+      rgb_color: [254, 254, 254]
+      color_temp: 154
+      brightness: 254
+    light.tiraled_2_0:
+      state: on
+      rgb_color: [254, 254, 254]
+      brightness: 254
+- name: 'DespiertaSalon'
+  entities:
+    light.sofa:
+      state: on
+      rgb_color: [254, 254, 254]
+      color_temp: 154
+      brightness: 254
+      transition: 60
+    light.mueble:
+      state: on
+      rgb_color: [254, 254, 254]
+      color_temp: 154
+      brightness: 254
+      transition: 60
+    light.tiraled_2_0:
+      state: on
+      rgb_color: [254, 254, 254]
+      brightness: 254
+      transition: 60
+- name: 'DespiertaCuarto'
+  entities:
+    light.mesitadani:
+      state: on
+      brightness: 254
+      transition: 300
+    light.mesitaana:
+      state: on
+      brightness: 254
+      transition: 300
+
+- name: 'DespiertaDespacho'
+  entities:
+    light.lampara_del_despacho:
+      state: on
+      rgb_color: [254, 254, 254]
+      brightness: 254
+      transition: 10
+      color_temp: 154
+- name: 'ApagaDespacho'
+  entities:
+    light.lampara_del_despacho:
+      state: off
+      transition: 30
+
+- name: 'Noche'
+  entities:
+    light.sofa:
+      state: on
+      rgb_color: [254, 254, 254]
+      color_temp: 154
+      brightness: 75
+    light.mueble:
+      state: on
+      rgb_color: [254, 254, 254]
+      color_temp: 154
+      brightness: 75
+    light.mesitadani:
+      state: on
+      brightness: 50
+    light.mesitaana:
+      state: on
+      brightness: 50
+    light.lampara_del_despacho:
+      state: off
+    light.tiraled_2_0:
+      state: on
+      rgb_color: [254, 254, 254]
+      brightness: 7
+- name: 'Apagar'
+  entities:
+    light.sofa:
+      state: off
+      transition: 10
+    light.mueble:
+      state: off
+      transition: 10
+    light.mesitadani:
+      state: off
+      transition: 10
+    light.lampara_del_despacho:
+      state: off
+      transition: 10
+    light.mesitaana:
+      state: off
+      transition: 10
+    light.tiraled_2_0:
+      state: off
+      transition: 10
+
+- name: 'DimSalon'
+  entities:
+    light.sofa:
+      state: off
+      transition: 2
+    light.mueble:
+      state: on
+      rgb_color: [55, 56, 254]
+      color_temp: 500
+      transition: 2
+      brightness: 30
+    light.tiraled_2_0:
+      state: on
+      rgb_color: [0, 0, 254]
+      brightness: 20
+      transition: 2
+- name: 'PausaSalon'
+  entities:
+    light.sofa:
+      state: on
+      rgb_color: [254, 254, 254]
+      color_temp: 154
+      transition: 2
+      brightness: 50
+    light.mueble:
+      state: on
+      rgb_color: [254, 254, 254]
+      color_temp: 154
+      transition: 2
+      brightness: 150
+    light.tiraled_2_0:
+      state: on
+      rgb_color: [254, 254, 254]
+      brightness: 60
+      transition: 2
+- name: 'StopSalon'
+  entities:
+    light.sofa:
+      state: on
+      rgb_color: [254, 254, 254]
+      color_temp: 154
+      transition: 20
+      brightness: 200
+    light.mueble:
+      state: on
+      rgb_color: [254, 254, 254]
+      color_temp: 154
+      transition: 20
+      brightness: 200
+    light.tiraled_2_0:
+      state: on
+      rgb_color: [254, 254, 254]
+      brightness: 150
+      transition: 20
+- name: 'HoraDeDormir'
+  entities:
+    light.sofa:
+      state: on
+      rgb_color: [254, 254, 254]
+      color_temp: 154
+      brightness: 25
+      transition: 20
+    light.mueble:
+      state: on
+      rgb_color: [254, 254, 254]
+      color_temp: 154
+      brightness: 25
+      transition: 5
+    light.mesitadani:
+      state: on
+      brightness: 200
+      transition: 20
+    light.mesitaana:
+      state: on
+      brightness: 200
+      transition: 20
+    light.tiraled_2_0:
+      state: off
+      transition: 30
+- name: 'SubeLucesComedor'
+  entities:
+    light.sofa:
+      state: on
+      rgb_color: [254, 254, 254]
+      color_temp: 154
+      transition: 3
+      brightness: 254
+    light.mueble:
+      state: on
+      rgb_color: [254, 254, 254]
+      color_temp: 154
+      transition: 3
+      brightness: 254
+    light.tiraled_2_0:
+      state: on
+      rgb_color: [254, 254, 254]
+      brightness: 254
+      transition: 3
+- name: 'BajaLucesComedor'
+  entities:
+    light.sofa:
+      state: on
+      rgb_color: [254, 254, 254]
+      color_temp: 154
+      transition: 20
+      brightness: 75
+    light.mueble:
+      state: on
+      rgb_color: [254, 254, 254]
+      color_temp: 154
+      transition: 20
+      brightness: 75
+    light.tiraled_2_0:
+      state: on
+      rgb_color: [254, 254, 254]
+      transition: 20
+      brightness: 75
+- name: 'SubeLucesCuarto'
+  entities:
+    light.mesitadani:
+      state: on
+      brightness: 254
+      transition: 1
+    light.mesitaana:
+      state: on
+      brightness: 254
+      transition: 10
+
+- name: 'BajaLucesCuarto'
+  entities:
+    light.mesitadani:
+      state: on
+      brightness: 75
+      transition: 5
+    light.mesitaana:
+      state: on
+      brightness: 75
+      transition: 15
+
+- name: 'Pinchito'
+  entities:
+    light.mesitaana:
+      state: on
+      brightness: 40
+      transition: 20
+    light.mesitadani:
+      state: off

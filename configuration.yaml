@@ -1,0 +1,118 @@
+homeassistant:
+  name: Casa
+  temperature_unit: C
+  time_zone: Europe/Madrid
+  customize: !include customized.yaml
+
+frontend:
+
+history:
+
+logbook:
+
+sun:
+
+#updater:
+
+http: !include config/httpconfig.yaml
+
+zwave:
+  usb_path: /dev/ttyACM0
+  config_path: /usr/local/lib/python3.4/dist-packages/libopenzwave-0.3.0b8-py3.4-linux-armv7l.egg/config
+
+mqtt:
+  broker: 192.168.1.5
+  port: 1883
+  client_id: home-assistant-2
+  keepalive: 60
+
+switch:
+  - platform: mqtt
+    name: "TV Salon"
+    state_topic:   "harmony-api/activities/ver-tv/state"
+    command_topic: "harmony-api/activities/ver-tv/command"
+    qos: 0
+    payload_on: "on"
+    payload_off: "off"
+  - platform: mqtt
+    name: "Plex"
+    state_topic:   "harmony-api/activities/htpc/state"
+    command_topic: "harmony-api/activities/htpc/command"
+    qos: 0
+    payload_on: "on"
+    payload_off: "off"
+  - platform: mqtt
+    name: "Radio"
+    state_topic:   "harmony-api/activities/radio/state"
+    command_topic: "harmony-api/activities/radio/command"
+    qos: 0
+    payload_on: "on"
+    payload_off: "off"
+
+sensor:
+  - platform: mqtt
+    state_topic: 'harmony-api/current_activity'
+    name: 'Harmony'
+    value_template: "{% if value == 'ver_tv' %}TV{% elif value == 'htpc' %}PLEX{% elif value =='radio' %}RADIO{% elif value =='poweroff' %}OFF{% endif %}"
+  - platform: mqtt
+    state_topic: 'hass/despacho/mini'
+    name: "Mini Despacho"
+
+mysensors:
+  gateways:
+    - port: '/dev/ttyUSB0'
+      persistence_file: '/home/pi/.homeassistant/mysensors.json'
+      baud_rate: 115200
+  debug: true
+  version: '1.5'
+  persistence: true
+
+shell_command:
+  busca_gente: '/usr/bin/python2 /home/pi/Scripts/buscagente.py'
+
+input_boolean:
+  despcuarto:
+    initial: on
+  luztarde:
+    initial: on
+  lucesplex:
+    initial: on
+  entrarsalirdecasa:
+    initial: on
+  entrarsalircuarto:
+    initial: on
+  lucesmesitacomedor:
+    initial: on
+
+input_select:
+  alarma_cuarto:
+    name: 'Alarma Cuarto'
+    options:
+     - '06:35'
+     - '06:50'
+     - '07:00'
+    initial: '06:50'
+    icon: 'mdi:clock'
+
+notify: !include config/pushovercfg.yaml
+
+device_tracker:
+  - platform: mqtt
+    devices:
+      dani_iphone: 'hass/dani/localizacion'
+      ana_s5: 'hass/ana/localizacion'
+
+light:
+  platform: hue
+  host: 192.168.1.200
+
+media_player:
+  platform: plex
+
+group: !include grupos.yaml
+
+scene: !include scenes.yaml
+
+automation: !include automation.yaml
+
+script: !include scripts.yaml
