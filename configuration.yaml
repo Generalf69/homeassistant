@@ -2,6 +2,8 @@ homeassistant:
   name: Casa
   temperature_unit: C
   time_zone: Europe/Madrid
+  latitude: 39.431591
+  longitude: -0.412215
   customize: !include customized.yaml
 
 frontend:
