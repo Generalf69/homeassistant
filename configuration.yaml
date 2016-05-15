@@ -2,8 +2,8 @@ homeassistant:
   name: Casa
   temperature_unit: C
   time_zone: Europe/Madrid
-  latitude: 39.431591
-  longitude: -0.412215
+  latitude: redacted
+  longitude: redacted
   customize: !include customized.yaml
 
 frontend:
@@ -14,9 +14,16 @@ logbook:
 
 sun:
 
-#updater:
+updater:
 
 http: !include config/httpconfig.yaml
+
+zone:
+  - name: 'Home'
+    latitude: 39.431591
+    longitude: -0.412215
+    radius: 100
+    icon: 'mdi:home'
 
 zwave:
   usb_path: /dev/ttyACM0
@@ -25,7 +32,7 @@ zwave:
 mqtt:
   broker: 192.168.1.5
   port: 1883
-  client_id: home-assistant-2
+  client_id: hass
   keepalive: 60
 
 switch:
@@ -55,22 +62,27 @@ sensor:
   - platform: mqtt
     state_topic: 'harmony-api/current_activity'
     name: 'Harmony'
-    value_template: "{% if value == 'ver_tv' %}TV{% elif value == 'htpc' %}PLEX{% elif value =='radio' %}RADIO{% elif value =='poweroff' %}OFF{% endif %}"
+    value_template: "{% if value == 'ver-tv' %}TV{% elif value == 'htpc' %}PLEX{% elif value =='radio' %}RADIO{% elif value =='satelite' %}SAT.{% elif value =='poweroff' %}OFF{% endif %}"
   - platform: mqtt
     state_topic: 'hass/despacho/mini'
     name: "Mini Despacho"
+  - platform: template
+    sensors:
+      elevacion:
+        value_template: '{{ states.sun.sun.attributes.elevation }}'
+        friendly_name: 'Elevacion'
+        unit_of_measurement: 'º'
 
 mysensors:
   gateways:
-    - port: '/dev/ttyUSB0'
-      persistence_file: '/home/pi/.homeassistant/mysensors.json'
-      baud_rate: 115200
+    - device: '192.168.1.11'
+      persistence_file: '/home/pi/.homeassistant/mysensors2.json'
   debug: true
   version: '1.5'
   persistence: true
 
 shell_command:
-  busca_gente: '/usr/bin/python2 /home/pi/Scripts/buscagente.py'
+  busca_gente: 'python2 /home/pi/Scripts/buscagente.py'
 
 input_boolean:
   despcuarto:
