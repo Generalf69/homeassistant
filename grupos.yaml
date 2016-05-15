@@ -1,14 +1,3 @@
-# default_view:
-#   view: yes
-#   entities:
-#     - group.Familia
-#     - group.luces
-#     - group.Multimedia
-#     - group.movapert
-#     - group.temphumedad
-#     - group.lux
-#     - sun.sun
-#     - sensor.solar_angle
 Familia:
   entities:
     - device_tracker.dani_iphone
@@ -20,6 +9,7 @@ Luces:
     - light.tiraled_2_0
     - light.mesitadani
     - light.mesitaana
+    - light.tiraled_6_0
     - light.lampara_del_despacho
 Multimedia:
   entities:
@@ -33,20 +23,25 @@ Mov./Apert.:
   entities:
     - binary_sensor.fibaro_system_fgms001_motion_sensor_sensor_2
     - binary_sensor.movyluz_3_0
-    - binary_sensor.micropuerta_1_3
+    - binary_sensor.contacto_1_0
     - binary_sensor.contacto_10_0
 Temp-Humedad:
   entities:
     - sensor.sensebender_micro_5_1
     - sensor.sensebender_micro_5_2
     - sensor.fibaro_system_fgms001_motion_sensor_temperature_2
-    - sensor.sensor_humetemp_9_1
-    - sensor.sensor_humetemp_9_0
-
+    - sensor.sensor_humetem_9_1
+    - sensor.sensor_humetem_9_0
+    - sensor.temperature_sensor_11_0
 Lux:
   entities:
     - sensor.movyluz_3_1
     - sensor.fibaro_system_fgms001_motion_sensor_luminance_2
+    - sensor.sensorluz_7_0
+Exterior:
+  entities:
+    - sun.sun
+    - sensor.elevacion
 Escenas:
   entities:
     - scene.despiertasalon
